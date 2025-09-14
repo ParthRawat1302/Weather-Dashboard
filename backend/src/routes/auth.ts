@@ -23,7 +23,7 @@ router.get('/google/callback',
     const user = req.user as User;
     
     if (!user) {
-      return res.redirect(`${process.env.CLIENT_ORIGIN}/auth/error`);
+      return res.redirect(`${process.env.CLIENT_ORIGIN}/#/auth/error`);
     }
 
     // Generate tokens
@@ -39,7 +39,7 @@ router.get('/google/callback',
     });
 
     // Redirect to frontend with access token
-    res.redirect(`${process.env.CLIENT_ORIGIN}/auth/success?token=${accessToken}`);
+    res.redirect(`${process.env.CLIENT_ORIGIN}?#/auth/success?token=${accessToken}`);
   })
 );
 
