@@ -22,6 +22,8 @@ import { validateEnv } from './utils/validateEnv.js';
 // Validate environment variables
 validateEnv();
 const app = express();
+// Tell Express it is behind a trusted proxy (Render)
+app.set('trust proxy', 1);
 
 const PORT = process.env.PORT || 5000;
 
