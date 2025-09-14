@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
+    "allowJs": true,
+    "strict": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "outDir": "dist",
+    "typeRoots": ["./types", "./node_modules/@types"],
+    "rootDir": "src",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"],
+      "@shared/*": ["src/shared/*"]
+    },
+    "ignoreDeprecations": "6.0",
+  },
+  "include": ["src/**/*", "types/**/*","src/shared/**/*", "src/public/dist"],
+  "exclude": ["node_modules", "src/public/dist"],
+}
