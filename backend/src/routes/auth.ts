@@ -29,7 +29,9 @@ router.get('/google/callback',
     }
     // Generate tokens
     const accessToken = tokenService.generateAccessToken(user);
+    console.log("Token:"+accessToken);
     const refreshToken = tokenService.generateRefreshToken(user);
+    console.log("Refresh Token:"+refreshToken);
 
     // Set refresh token as HTTP-only cookie
     res.cookie('refreshToken', refreshToken, {
