@@ -67,7 +67,7 @@ app.get('/health', (req, res) => {
 
 });// CORS configuration
 app.use(cors({
-  origin: process.env.CLIENT_ORIGIN,
+  origin: https://parthrawat1302.github.io/personal-website/,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
