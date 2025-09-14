@@ -18,7 +18,6 @@
       "@/*": ["./src/*"],
       "@shared/*": ["src/shared/*"]
     },
-    "ignoreDeprecations": "6.0",
   },
   "include": ["src/**/*", "types/**/*","src/shared/**/*", "src/public/dist"],
   "exclude": ["node_modules", "src/public/dist"],
