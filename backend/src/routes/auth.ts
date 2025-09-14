@@ -10,7 +10,9 @@ const router = express.Router();
 
 // Google OAuth initiation
 router.get('/google', 
-  passport.authenticate('google', { scope: ['profile', 'email'] })
+  passport.authenticate('google', { scope: ['profile', 'email'],
+                                   accessType: 'offline', 
+                                   prompt: 'consent' })
 );
 
 // Google OAuth callback
@@ -25,7 +27,6 @@ router.get('/google/callback',
     if (!user) {
       return res.redirect(`${process.env.CLIENT_ORIGIN}/#/auth/error`);
     }
-
     // Generate tokens
     const accessToken = tokenService.generateAccessToken(user);
     const refreshToken = tokenService.generateRefreshToken(user);
