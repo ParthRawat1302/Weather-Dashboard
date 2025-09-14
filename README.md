@@ -1,7 +1,7 @@
 # ⛅ Weather Dashboard
 
 A full-stack **Weather Dashboard** that allows users to check real-time and hourly weather details for any location, save them for future reference, and personalize their experience with themes and settings.  
-The app integrates **Google OAuth** for authentication and serves both frontend and backend from a single server.
+The app integrates **Google OAuth** for authentication and serves frontend and backend from a different server.
 
 ---
 
@@ -22,7 +22,7 @@ The app integrates **Google OAuth** for authentication and serves both frontend 
 
 ## 🛠️ Tech Stack
 
-- **Frontend:** HTML, CSS, JavaScript (built & bundled into `/dist`)  
+- **Frontend:** React,TailwindCSS,Typescript  
 - **Backend:** Node.js / Express (serving frontend + API handling)  
 - **Authentication:** Google OAuth  
 - **API Integration:** Weather API (e.g., OpenWeatherMap)  
@@ -33,7 +33,7 @@ The app integrates **Google OAuth** for authentication and serves both frontend 
 
 ## 🔗 Live Demo
 
-👉 [Check it here](https://yourdeploymentlink.com)  
+👉 [Check it here](https://parthrawat1302.github.io/Weather-Dashboard/)
 
 ---
 
@@ -48,8 +48,6 @@ The app integrates **Google OAuth** for authentication and serves both frontend 
       npm install
    cd frontend 
       npm install
-      npm run build
-    #Then copyy the dist folder in backend/src/public
 3.**Add Environment Variables**
     # Server Configuration
     PORT=5000
@@ -74,8 +72,10 @@ The app integrates **Google OAuth** for authentication and serves both frontend 
 
 4.**Run the server**
     cd backend
-    npx prisma generate
-    npm run dev
+      npx prisma generate
+      npm run dev
+    cd frontend 
+      npm run dev
 5.**Open http://localhost:5000 in your browser**
 
 ---
