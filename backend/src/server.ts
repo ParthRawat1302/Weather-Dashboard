@@ -67,7 +67,7 @@ app.get('/health', (req, res) => {
 
 });// CORS configuration
 app.use(cors({
-  origin: https://parthrawat1302.github.io/Weather-Dashboard/,
+  origin: process.env.CLIENT_ORIGIN,
   credentials: true,
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization', 'Cookie'],
